@@ -84,4 +84,14 @@ public class VectorUtilAS3 {
     }
     return null;
   }
+
+  /**
+   * 配列内のnullを削除して新しい配列を返す
+   * @return 要素にnullを含まない配列を返す。
+   */
+  public function compact():* {
+    return _vector.filter(function(element:Object, _index:int, _source:*):Boolean {
+      return element != null;
+    });
+  }
 }
